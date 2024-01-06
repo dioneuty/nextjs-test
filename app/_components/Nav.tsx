@@ -4,7 +4,7 @@ import {usePathname} from "next/navigation";
 import Link from "next/link";
 import {ReactElement} from "react";
 
-export default function nav(): ReactElement {
+export default function Nav(): ReactElement {
 
     const pathname = usePathname();
 
