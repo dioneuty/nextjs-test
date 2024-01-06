@@ -1,0 +1,6 @@
+.btn_tomato {
+    display: flex;
+    justify-content: space-between;
+    background-color: tomato;
+    padding: 2em;
+}
