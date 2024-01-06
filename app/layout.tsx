@@ -22,11 +22,11 @@ export default function RootLayout({
       <div className='p-5 container mx-auto'>
         {children}
       </div>
-      <style jsx global>{`
+      {/*<style jsx global>{`
         .btn-yellow{
           color:yellow
         }
-      `}</style>
+      `}</style>*/}
       </body>
       </html>
   )
