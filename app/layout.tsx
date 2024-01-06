@@ -16,13 +16,18 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+      <html lang="en">
       <body className={inter.className}>
-        <Nav/>
-        <div className='p-5 container mx-auto'>
-            {children}
-        </div>
+      <Nav/>
+      <div className='p-5 container mx-auto'>
+        {children}
+      </div>
+      <style jsx global>{`
+        .btn-yellow{
+          color:yellow
+        }
+      `}</style>
       </body>
-    </html>
+      </html>
   )
 }
