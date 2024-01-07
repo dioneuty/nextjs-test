@@ -13,11 +13,15 @@ export default function Nav(): ReactElement {
         return pathname === url && styles.active;
     }
 
+    const cmStyle = 'bg-blue-300 p-2 rounded';
+
     return (
         <div className='bg-gray-300 p-5 flex gap-3'>
-            <Link href="/" className={`${styles.link} ${setActiveColor('/')} bg-blue-300 p-2 rounded`}>Home</Link>
-            <Link href="/about" className={`${styles.link} ${setActiveColor('/about')} && styles.active}`}>About</Link>
-            <Link href="/about" className={'purple'}>Purple</Link>
+            <Link href="/" className={`${styles.link} ${setActiveColor('/')} ${cmStyle}`}>Home</Link>
+            <Link href="/about" className={`${styles.link} ${setActiveColor('/about')} ${cmStyle}`}>About</Link>
+            <Link href="/movie" className={`${styles.link} ${setActiveColor('/movie')} ${cmStyle}`}>Movie</Link>
+            {/*<Link href="/about" className={`${styles.link} ${setActiveColor('/about')} && styles.active}`}>About</Link>
+            <Link href="/movie" className={'purple'}>Movie</Link>*/}
             <style jsx>{`
                 /*div {
                     background-color: purple;
