@@ -20,6 +20,7 @@ export default function Nav(): ReactElement {
             <Link href="/" className={`${styles.link} ${setActiveColor('/')} ${cmStyle}`}>Home</Link>
             <Link href="/about" className={`${styles.link} ${setActiveColor('/about')} ${cmStyle}`}>About</Link>
             <Link href="/movie" className={`${styles.link} ${setActiveColor('/movie')} ${cmStyle}`}>Movie</Link>
+            <Link href="/movie-server" className={`${styles.link} ${setActiveColor('/movie-server')} ${cmStyle}`}>Movie-server</Link>
             {/*<Link href="/about" className={`${styles.link} ${setActiveColor('/about')} && styles.active}`}>About</Link>
             <Link href="/movie" className={'purple'}>Movie</Link>*/}
             <style jsx>{`
