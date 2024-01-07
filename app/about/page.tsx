@@ -1,5 +1,6 @@
 import styles from './page.module.css'
 import type {Metadata} from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
     title: 'about',
@@ -10,6 +11,7 @@ export default function about() {
     return (
         <div>
             <h1>about</h1>
+            <Image src='/vercel.svg' alt='vercel' width='300' height='300'/>
             <button className={styles.btn_tomato}>1</button>
             <button className={styles.btn_tomato}>2</button>
             <button className={styles.btn_tomato}>3</button>
