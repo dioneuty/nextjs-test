@@ -4,8 +4,9 @@ import {useEffect, useState} from 'react'
 
 export default function Movies () {
 
-    const [movies, setMovies] = useState([]);
+    const [movies, setMovies] = useState();
 
+    //todo: authorization의 bearer뒤의 값을 숨겨야 함
     const options = {
         method: 'GET',
         headers: {
@@ -27,7 +28,8 @@ export default function Movies () {
 
     return (
         <div>
-            {movies.map((movie:{id:number, original_title:string}) => (
+            {!movies && <div>loading...</div>}
+            {movies?.map((movie:{id:number, original_title:string}) => (
                 <div key={movie.id}>
                     <h4>{movie.original_title}</h4>
                 </div>
