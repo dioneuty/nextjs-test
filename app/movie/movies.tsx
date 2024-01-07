@@ -15,11 +15,14 @@ export default function Movies () {
     };
 
     useEffect(() => {
-        (async() =>{
+        (async() => {
             const {results} = await fetch('https://api.themoviedb.org/3/trending/movie/day?language=en-US', options).then(response => response.json());
             setMovies(results);
         })();
 
+        return () => {
+            console.log('언마운트');
+        };
     }, []);
 
     return (
