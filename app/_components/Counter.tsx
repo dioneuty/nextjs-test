@@ -1,9 +1,11 @@
 'use client';
 
-import {ReactElement, useState} from "react";
+import {ReactElement, useState, useEffect} from "react";
 
 export default function Counter():ReactElement {
     const [counter,setCounter] = useState(0);
+
+    useEffect(()=> {console.log('마운트')}, [counter]);
 
     //todo: useCallback?
 
