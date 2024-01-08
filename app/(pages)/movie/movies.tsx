@@ -3,7 +3,6 @@
 import {useEffect, useState} from 'react'
 import Image from "next/image";
 import Link from "next/link";
-import {useRouter} from "next/router";
 
 export default function Movies () {
 
@@ -11,7 +10,7 @@ export default function Movies () {
 
     useEffect(() => {
         (async() => {
-            const {results} = await fetch('/movie/api/list').then(response => response.json());
+            const {results} = await fetch('/api/movie/list').then(response => response.json());
             setMovies(results);
         })();
 

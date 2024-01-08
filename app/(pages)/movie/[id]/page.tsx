@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 async function getMovie(id:string) {
-    const data = await fetch(process.env.PUB_URL + `/movie/api/detail?id=${id}`).then(response => response.json());
+    const data = await fetch(process.env.PUB_URL + `/api/movie/detail?id=${id}`).then(response => response.json());
 
     return data;
 }
