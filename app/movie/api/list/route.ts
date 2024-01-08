@@ -11,7 +11,7 @@ const options = {
 };
 
 export async function GET() {
-    const data = await fetch('https://api.themoviedb.org/3/trending/movie/day?language=en-US', options).then(response => response.json());
+    const data = await fetch('https://api.themoviedb.org/3/trending/movie/day?language=en-US', options).then(response => response.json()).catch(err => console.error(err));
 
     return NextResponse.json(data);
 }
