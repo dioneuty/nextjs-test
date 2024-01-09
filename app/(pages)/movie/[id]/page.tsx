@@ -1,5 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
+import {ResolvingMetadata} from "next";
+import type { Metadata } from 'next'
 
 async function getMovie(id:string) {
     const data = await fetch(process.env.PUB_URL + `/api/movie/detail?id=${id}`).then(response => response.json());
@@ -7,6 +9,10 @@ async function getMovie(id:string) {
     return data;
 }
 
+type Props = {
+    params: { id: string }
+    searchParams: { title: string }
+}
 
 //https://nextjs.org/docs/app/building-your-application/optimizing/metadata
 export async function generateMetadata({ params, searchParams }: Props, parent: ResolvingMetadata): Promise<Metadata> {
@@ -16,7 +22,7 @@ export async function generateMetadata({ params, searchParams }: Props, parent: 
     }
 }
 
-export default async function detail(context, params) {
+export default async function detail(context:any, params:any) {
     const {original_title,poster_path,overview} = await getMovie(context.params.id);
 
     return (

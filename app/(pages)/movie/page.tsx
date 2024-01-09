@@ -5,6 +5,7 @@ import {useState} from "react";
 
 export default function about() {
 
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [view,setView] = useState(true);
 
     return (

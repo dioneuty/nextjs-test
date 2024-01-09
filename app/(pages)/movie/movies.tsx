@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Movies () {
 
-    const [movies, setMovies] = useState();
+    const [movies, setMovies] = useState(null);
 
     useEffect(() => {
         (async() => {
@@ -21,7 +21,7 @@ export default function Movies () {
 
     return (
         <div className={`flex flex-wrap`}>
-            {!movies && <div className={`p-5 bg-red-300`}>loading...</div>}
+            {movies == null && <div className={`p-5 bg-red-300 mx-auto`}>loading...</div>}
             {movies?.map((movie:{id:number, original_title:string, poster_path:string}) => (
                 <div key={movie.id} className={`p-4`}>
                     <Link href={{pathname: `/movie/${movie.id}`, query: {title: movie.original_title,}}}>
