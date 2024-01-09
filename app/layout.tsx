@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Nav from "@/app/_components/Nav";
+import Footer from "@/app/_components/Footer";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,18 +19,23 @@ export default function RootLayout({
   return (
       <html lang="en">
       <body className={inter.className}>
-      <Nav/>
-      <div className='p-5 container mx-auto'>
-          <div className={`mt-20`}>
-            {children}
+      <div className="min-h-screen">
+          <Nav/>
+          <div className='p-5 container mx-auto mb-auto'>
+              <div className={`mt-20`}>
+                  {children}
+              </div>
+          </div>
+          <div className={`sticky top-[100vh]`}>
+            <Footer/>
           </div>
       </div>
-      {/*<style jsx global>{`
+          {/*<style jsx global>{`
         .btn-yellow{
           color:yellow
         }
       `}</style>*/}
       </body>
       </html>
-  )
+)
 }
