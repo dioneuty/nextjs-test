@@ -8,11 +8,13 @@ export default function Movies () {
 
     const [movies, setMovies] = useState(null);
 
+    async function getMovieList () {
+        const {results} = await fetch('/api/movie/list').then(response => response.json());
+        setMovies(results);
+    }
+
     useEffect(() => {
-        (async() => {
-            const {results} = await fetch('/api/movie/list').then(response => response.json());
-            setMovies(results);
-        })();
+        getMovieList();
 
         return () => {
             console.log('언마운트');
