@@ -1,6 +1,6 @@
 
 async function getMovie() {
-    const data = await fetch(process.env.PUB_URL + '/movie/api/list').then(response => response.json());
+    const data = await fetch(process.env.NEXT_PUBLIC_PUB_URL + '/movie/api/list').then(response => response.json());
 
     return data;
 }

@@ -24,7 +24,7 @@ export default function Update({params}) {
     //todo: react-hook-form
 
     return (
-        <form onSubmit={(e)=> {
+        <form onSubmit={(e:any)=> {
             e.preventDefault();
             const title = e.target.title.value;
             const body = e.target.body.value;
@@ -48,7 +48,7 @@ export default function Update({params}) {
             <p>
                 <input type="text" name="title" placeholder='title' onChange={(e)=> setTitle(e.target.value)} value={title}/>
             </p>
-            <textarea name="body" cols="30" rows="10" placeholder="body" onChange={e=> setBody(e.target.value)} value={body}></textarea>
+            <textarea name="body" cols={30} rows={10} placeholder="body" onChange={e=> setBody(e.target.value)} value={body}></textarea>
             <div className={`flex justify-center gap-2`}>
                 <input type="submit" className={`p-4 bg-green-300 rounded`} value={`update`}/>
             </div>

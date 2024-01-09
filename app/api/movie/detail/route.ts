@@ -1,6 +1,6 @@
 import {NextRequest, NextResponse} from "next/server";
 
-const key = process.env.API_KEY;
+const key = process.env.NEXT_PUBLIC_API_KEY;
 
 const options = {
     method: 'GET',

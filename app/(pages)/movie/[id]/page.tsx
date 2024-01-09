@@ -4,7 +4,7 @@ import {ResolvingMetadata} from "next";
 import type { Metadata } from 'next'
 
 async function getMovie(id:string) {
-    const data = await fetch(process.env.PUB_URL + `/api/movie/detail?id=${id}`).then(response => response.json());
+    const data = await fetch(process.env.NEXT_PUBLIC_PUB_URL + `/api/movie/detail?id=${id}`).then(response => response.json());
 
     return data;
 }
