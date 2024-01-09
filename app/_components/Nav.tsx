@@ -19,6 +19,7 @@ export default function Nav(): ReactElement {
         <div className='bg-gray-300 p-5 flex gap-3 fixed w-full justify-center'>
             <Link href="/" className={`${styles.link} ${setActiveColor('/')} ${cmStyle}`}>Home</Link>
             <Link href="/about" className={`${styles.link} ${setActiveColor('/about')} ${cmStyle}`}>About</Link>
+            <Link href="/api-mock" className={`${styles.link} ${setActiveColor('/api-mock')} ${cmStyle}`}>Api-Mock</Link>
             <Link href="/movie" className={`${styles.link} ${setActiveColor('/movie')} ${cmStyle}`}>Movie</Link>
             <Link href="/movie-server" className={`${styles.link} ${setActiveColor('/movie-server')} ${cmStyle}`}>Movie-server</Link>
             {/*<Link href="/about" className={`${styles.link} ${setActiveColor('/about')} && styles.active}`}>About</Link>
