@@ -20,7 +20,9 @@ export default function RootLayout({
       <body className={inter.className}>
       <Nav/>
       <div className='p-5 container mx-auto'>
-        {children}
+          <div className={`mt-20`}>
+            {children}
+          </div>
       </div>
       {/*<style jsx global>{`
         .btn-yellow{

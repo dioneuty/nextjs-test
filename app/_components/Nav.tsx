@@ -16,7 +16,7 @@ export default function Nav(): ReactElement {
     const cmStyle = 'bg-blue-300 p-2 rounded';
 
     return (
-        <div className='bg-gray-300 p-5 flex gap-3'>
+        <div className='bg-gray-300 p-5 flex gap-3 fixed w-full justify-center'>
             <Link href="/" className={`${styles.link} ${setActiveColor('/')} ${cmStyle}`}>Home</Link>
             <Link href="/about" className={`${styles.link} ${setActiveColor('/about')} ${cmStyle}`}>About</Link>
             <Link href="/movie" className={`${styles.link} ${setActiveColor('/movie')} ${cmStyle}`}>Movie</Link>
