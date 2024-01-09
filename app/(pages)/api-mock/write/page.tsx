@@ -28,15 +28,17 @@ export default function Write() {
                     //router.refresh();
                 })
         }}>
+            <div className={`mb-5 p-2`}>
+                write
+            </div>
             <p>
                 <input type="text" name="title" placeholder='title'/>
             </p>
             <textarea name="body" cols="30" rows="10" placeholder="body"></textarea>
-            <div className={`mb-5 border border-blue-300 p-2`}>
-                write
+            <div className={`flex justify-center gap-2`}>
+                <input type="submit" className={`p-4 bg-green-300 rounded`} value={`create`}/>
+                <Link href={`/api-mock`} className={`p-4 bg-blue-300 rounded`}>List</Link>
             </div>
-            <input type="submit" value={`create`}/>
-            <Link href={`/api-mock`} className={`p-4 bg-blue-300 rounded`}>List</Link>
         </form>
     );
 }

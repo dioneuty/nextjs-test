@@ -18,7 +18,7 @@ export default async function Detail({params}:any) {
             </div>
             <div className={`flex justify-center gap-1`}>
                 <Link href={`/api-mock`} className={`p-4 bg-blue-300 rounded`}>List</Link>
-                <Link href={`/api-mock`} className={`p-4 bg-blue-300 rounded`}>Delete</Link>
+                <Link href={`/api-mock`} className={`p-4 bg-red-300 rounded`}>Delete</Link>
             </div>
         </>
     );
